@@ -7,8 +7,10 @@
 void AMyAIController::BeginPlay()
 {
     Super::BeginPlay();
+
     //Find all waypoints in level and store in array.
     UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), Waypoints);
+
     //Take first move.
     GoToRandomWaypoint();
 }
